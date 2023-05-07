@@ -35,5 +35,5 @@ mysqli_close($conn);
   }else{
       echo 'Image not found...';
   }
-}
+
 ?>
