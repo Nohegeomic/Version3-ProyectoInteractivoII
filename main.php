@@ -49,7 +49,7 @@ $fileSRC="images/Haslin.png";
                     <i class="fas fa-home"></i>
                     <span class="nav-item">Home</span>
                 </a></li>
-                <li class="nav-3"><a href="insbloppost.php" class="icon-sidebar">
+                <li class="nav-3"><a href="Calendario.php" class="icon-sidebar">
                     <i class="fas fa-calendar "></i>
                     <span class="nav-item">Calendario</span>
                 </a></li>
