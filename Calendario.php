@@ -1,5 +1,6 @@
 <?php
 include 'Calendar.php';
+//en esta parte se declara la variable del calendario 
 $calendar = new Calendar(date('Y-m-d'));
 //Ejemplo de como poner un evento en el calendario linea 5
 // $calendar -> add_event('fox mccloud', '2023-05-25',1,'blue');
@@ -108,7 +109,7 @@ $calendar = new Calendar(date('Y-m-d'));
 
 
 
-           
+           <!--aqui se arma el calendario con la variable creada al comienzo del documento-->
             <section id="content home">
 
 			<?=$calendar?>
