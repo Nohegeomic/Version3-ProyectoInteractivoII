@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
 
 $sqlpost = "SELECT ID, descripcion FROM posts ORDER BY ID DESC";
 $resultpost = mysqli_query($conn, $sqlpost);
-
+$fileSRC="images/Haslin.png";
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ $resultpost = mysqli_query($conn, $sqlpost);
                 </li>
                 <li class="nav-1">
                     <a href="perfil.html" class="logo">
-                         <img src="<?php echo $fileSRC;?>" class="img-fluid">
+                         <img src="<?php echo $fileSRC?>" class="img-fluid">
                          <span class="nav-item"><?php echo $_SESSION['Nom']." ".$_SESSION['Apel'];?></span>
                     </a>
                 </li>
