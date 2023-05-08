@@ -9,7 +9,7 @@
     padding: 20px 0;
 }
 .calendar .header{
-    background-color:#c4161c;
+    background-color:#023c40;
 }
 .calendar .days {
     display: flex;
@@ -17,14 +17,14 @@
 }
 .calendar .days .day_name {
     width: calc(100% / 7);
-    border-right: 1px solid #2c7aca;
+    border-right: 1px solid #001514;
     padding: 20px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
     color: #818589;
     color: #fff;
-    background-color: #448cd6;
+    background-color: #b69990;
 }
 .calendar .days .day_name:nth-child(7) {
     border: none;
@@ -37,7 +37,7 @@
     border-bottom: 1px solid #e6e9ea;
     padding: 15px;
     font-weight: bold;
-    color: #7c878d;
+    color: #023c40;
     cursor: pointer;
     min-height: 100px;
 }
@@ -69,10 +69,10 @@
     border-left: 1px solid #e6e9ea;
 }
 .calendar .days .day_num:hover {
-    background-color: #fdfdfd;
+    background-color: #81adc8;
 }
 .calendar .days .day_num.ignore {
-    background-color: #fdfdfd;
+    background-color: #faf3dd;
     color: #ced2d4;
     cursor: inherit;
 }
