@@ -112,7 +112,7 @@ $calendar = new Calendar(date('Y-m-d'));
            <!--aqui se arma el calendario con la variable creada al comienzo del documento-->
             <section id="content home">
 
-			<?=$calendar?>
+			    <?=$calendar?>
 
             </section>
 
