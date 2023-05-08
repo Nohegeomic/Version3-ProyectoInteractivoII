@@ -108,8 +108,8 @@ $fileSRC="images/Haslin.png";
 					    	<form method="post" action="insbloppost.php" class="form-container" enctype="multipart/form-data">
 			                    <div class="container subir-img">
 			                        <h1 class="titulo">Subir imagen</h1>
-			                            <div class="container upload-container">
-				                              <input type="file" name="postImage" class="uploadFile" value="Upload Photo">
+			                            <div class="container upload-container" >
+				                              <input type="file" name="postImage" class="uploadFile" value="Upload Photo" required>
 			                        	</div>
 			                    </div>
 			                    <div class="container post-descripcion">

@@ -34,7 +34,8 @@ if (isset($_POST['submit'])) {
         	}
     	}else{ 
 			//to-do hacer experiencia de usuario si no subio img decirle con un modal o algo por el estilos
-			header("Location: main.php");	
+			header("Location: main.php");
 		}
 	}
 }
+?>
