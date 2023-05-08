@@ -1,5 +1,10 @@
 <?php
 
-$conn=mysqli_connect("localhost","root","","redsocial")or die(
+$hn = 'localhost';
+$db = 'redsocial';
+$un = 'root';
+$pw = 'root';
+
+$conn = mysqli_connect($hn, $un, $pw, $db)or die(
     "error de conexion");
 ?>
