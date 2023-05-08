@@ -22,7 +22,7 @@ class Calendar {
     public function __toString() {
         $num_days = date('t', strtotime($this->active_day . '-' . $this->active_month . '-' . $this->active_year));
         $num_days_last_month = date('j', strtotime('last day of previous month', strtotime($this->active_day . '-' . $this->active_month . '-' . $this->active_year)));
-        $days = [0 => 'Dom', 1 => 'Lun', 2 => 'Mar', 3 => 'Mie', 4 => 'Jue', 5 => 'Vie', 6 => 'Sab'];
+        $days = [0 => 'Lun', 1 => 'Mar', 2 => 'Mie', 3 => 'Jue', 4 => 'Vie', 5 => 'Sab', 6 => 'Dom'];
         $first_day_of_week = array_search(date('D', strtotime($this->active_year . '-' . $this->active_month . '-1')), $days);
         $html = '<div class="calendar">';
         $html .= '<div class="header">';
