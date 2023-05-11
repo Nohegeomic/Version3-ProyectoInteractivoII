@@ -109,7 +109,7 @@ $fileSRC="images/Haslin.png";
 			                    <div class="container subir-img">
 			                        <h1 class="titulo">Subir imagen</h1>
 			                            <div class="container upload-container" >
-                                              <!--Se agrego el required para que el usuario este forzado a agregar una img-->
+                                              <!-- Se agrego el required para que el usuario este forzado a agregar una img -->
 				                              <input type="file" name="postImage" class="uploadFile" value="Upload Photo" required>
 			                        	</div>
 			                    </div>

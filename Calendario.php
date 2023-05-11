@@ -12,6 +12,7 @@ $calendar = new Calendar(date('Y-m-d'));
 		<title>Event Calendar</title>
 		<link href="Calendario.css" rel="stylesheet" type="text/css">
 		<link href="calendar.css" rel="stylesheet" type="text/css">
+        <link href ="css/pruebaPopUp.css" rel = "stylesheet" type="text/css">
 
 
 		<meta charset="utf-8">
@@ -112,17 +113,36 @@ $calendar = new Calendar(date('Y-m-d'));
            <!--aqui se arma el calendario con la variable creada al comienzo del documento-->
             <section id="content home">
 
-			    <?=$calendar?>
+			<?=$calendar?>
 
-            </section>
 
+
+            <!--NO HACER CASO A ESTO SOLO ES PRUEBA-->
+            <!--Este es un pop up de prueba-->
+            <div class ="boxPopPrueba">
+                <a href="#divOne" class = "buttonPrueba" > Prueba</a>
+            </div>
+            <div class = "overlay" id = "divOne">
+                <div class="wrapper">
+                    <h2>Llene el formulario del evento</h2>
+                    <a href="#" class = "close">&times;</a>
+                    <div class="content">
+                        <div class="container">
+                            <form>
+                                <label>Nombre del Evento 1</label>
+                                <input type="text" placeholder = "Evento" >
+                                <label>Nombre del Evento 2</label>
+                                <input type="text" placeholder = "Evento" >
+                                <label>Nombre del Evento 3</label>
+                                <textarea placeholder = "Escriba una descripcion.. "></textarea>
+                                <input type="Submit" value = "submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           </section>
         </section>
-
-
-
-
-
-		
-		
-	</body>
+    </body>
 </html>
