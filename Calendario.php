@@ -116,28 +116,9 @@ $calendar = new Calendar(date('Y-m-d'));
                 <?=$calendar?>
                 <!--NO HACER CASO A ESTO SOLO ES PRUEBA-->
                 <!--Este es un pop up de prueba-->
+            
+                    <a class="button" href="dynamic-full-calendar.html">Contact US</a>
                 
-                <div class="box">
-                    <a class="button" href="#divOne">Contact US</a>
-                </div>
-                <div class="overlay" id="divOne">
-                    <div class="wrapper">
-                        <h2>Please Fill up The Form</h2><a class="close" href="#">&times;</a>
-                        <div class="content">
-                            <div class="container">
-                                <form>
-                                    <label>First Name</label>
-                                    <input placeholder="Your name.." type="text">
-                                    <label>Last Name</label>
-                                    <input placeholder="Your last name.." type="text">
-                                    <label>Subject</label> 
-                                    <textarea placeholder="Write something.."></textarea>
-                                    <input type="submit" value="Submit">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
            </section>
         </section>
     </body>
