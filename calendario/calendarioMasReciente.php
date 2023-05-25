@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,37 +10,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
 
-    <style>
-        :root {
-            --bs-success-rgb: 71, 222, 152 !important;
-        }
+	<head>
+		<meta charset="utf-8">
+		<title>Event Calendar</title>
+		<link href="Calendario.css" rel="stylesheet" type="text/css">
+		<link href="calendar.css" rel="stylesheet" type="text/css">
+        <link href ="css/pruebaPopUp.css" rel = "stylesheet" type="text/css">
 
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            font-family: Apple Chancery, cursive;
-        }
 
-        .btn-info.text-light:hover,
-        .btn-info.text-light:focus {
-            background: #000;
-        }
-        table, tbody, td, tfoot, th, thead, tr {
-            border-color: #ededed !important;
-            border-style: solid;
-            border-width: 1px !important;
-        }
-        .title{
-            font-size: 30px;
-        }
-    </style>
-</head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
 <body class="bg-light">
-
+<nav id="navbar-side">
+            <ul>
+                <li>
+                    <a href="main.php" class="logo-sidebar">
+                        <img src="images/unitec_mini.png" class="img-fluid logo-unitec" alt="unitec_mini">
+                    </a>
+                </li>
+                <li class="nav-1">
+                    <a href="perfil.html" class="logo">
+                         <img src="<?php echo $fileSRC?>" class="img-fluid">
+                         <span class="nav-item"><?php echo $_SESSION['Nom']." ".$_SESSION['Apel'];?></span>
+                    </a>
+                </li>
+                <li class="nav-2"><a href="main.php" class="icon-sidebar">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Home</span>
+                </a></li>
+                <li class="nav-5"><a href="#" class="icon-sidebar log-out" onclick="botonSalir()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Cerrar Sesion</span>
+                </a></li>
+            </ul>
+        </nav>
     <?php
         require_once('db-connect.php');
-
+        $fileSRC="images/Haslin.png";
         $schedules = $conn->query("SELECT * FROM `schedule_list`");
         $sched_res = [];
 
