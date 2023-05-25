@@ -24,7 +24,7 @@
     	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     	<link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
-<body class="bg-light">
+<body>
 <<nav id="navbar-side">
             <ul>
                 <li>
@@ -45,10 +45,6 @@
                     <span class="nav-item">Home</span>
                 </a></li>
                 </li>
-                <li class="nav-5"><a href="#" class="icon-sidebar log-out" onclick="botonSalir()">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span class="nav-item">Cerrar Sesion</span>
-                </a></li>
             </ul>
         </nav>
     <?php
@@ -66,7 +62,7 @@
         if(isset($conn)) $conn->close();
     ?>
 
-    
+    <section id="columnacentral">
     <div class="container py-5" id="page-container">
         <div class="row">
             <div class="col-md-9">
@@ -102,7 +98,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="text-center">
-                            <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"><i class="fa fa-save"></i> Save</button>
+                            <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form" href="#"><i class="fa fa-save"></i> Save</button>
                             <button class="btn btn-default border btn-sm rounded-0" type="reset" form="schedule-form"><i class="fa fa-reset"></i> Cancel</button>
                         </div>
                     </div>
@@ -142,11 +138,16 @@
             </div>
         </div>
     </div>
+    </section>
     
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
     <script src="Calendarioscript.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script>
         var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
     </script>

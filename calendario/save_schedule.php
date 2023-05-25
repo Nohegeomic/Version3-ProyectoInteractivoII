@@ -19,7 +19,7 @@
     $save = $conn->query($sql);
 
     if($save){
-        echo "<script> alert('Schedule Successfully Saved.'); location.replace('./') </script>";
+        echo "<script> alert('Schedule Successfully Saved.'); location.replace('./calendarioMasReciente.php') </script>";
     }else{
         echo "<pre>";
         echo "An Error occured.<br>";

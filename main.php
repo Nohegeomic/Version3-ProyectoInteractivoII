@@ -73,14 +73,7 @@ $fileSRC="images/Haslin.png";
             </ul>
         </nav>
 
-
-
-
-
-
-
-
-        <!--Pop up de botonSalir -->
+      <!--Pop up de botonSalir -->
         <div id="ventanaSalir" class="modal container-fluid" style="display: none;">
             <div class="contenidoSalir">
                 <h4>¿Estás seguro que quieres cerrar sesión?</h4>
