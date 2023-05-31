@@ -83,8 +83,6 @@ $fileSRC="images/Haslin.png";
             </div>
             </div>
         </div>
-
-
         <!-- POP UP PUBLICACION NUEVO-->
 
         <div class="modal fade" id="subir-publicacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -235,7 +233,7 @@ $fileSRC="images/Haslin.png";
                                     <img src="images/baba.jpg" class="img-fluid post-profile" alt="Profile-user">
                                 </article>
                                 <article class="col-10 container-fluid">
-                                        <h1 class="titulo"><?php echo $_SESSION['Nom'].' '.$_SESSION['Apel']; ?></h1>
+                                        <h1 class="titulo"><?php echo $_SESSION['Nom'].' '.$_SESSION['id'].' '.$_SESSION['Apel']; ?></h1>
                                         <p><?php echo $row['descripcion']; ?></p>
                                 </article>
                             </div>
