@@ -54,7 +54,8 @@ $resultpost = mysqli_query($conn, $sqlpost);
                     <div class="container publicacion">
                             <div class="row post-header">
                                 <article class="col-2">
-                                    <img src="<?php echo $row['foto_evento'];?>" class="img-fluid post-profile" alt="Profile-user">
+                                <img src="images/baba.jpg" class="img-fluid">
+                                    <!-- <img src="<?php //echo $row['foto_evento'];?>" class="img-fluid post-profile" alt="Profile-user"> -->
                                 </article>
                                 <article class="col-10 container-fluid">
                                 <h1 class="titulo"><?php echo $row['titulo_evento']; ?></h1> <!aqui va el titulo!>
@@ -63,7 +64,7 @@ $resultpost = mysqli_query($conn, $sqlpost);
                             </div>
                             
                             <div class="post-img">
-                                <img src="images/arte2.jpeg" class="img-fluid"  width="300" height="300"> <!de aqui salen las fotos!>
+                                <img src="imgvista_evento.php?image_id=<?php echo $row['ID']?>" class="img-fluid"  width="300" height="300"> <!de aqui salen las fotos!>
                             </div>
 
                             <div class="container" >
