@@ -16,8 +16,8 @@ $query = "SELECT * FROM usuarios";
     $_SESSION['id'] = $row['ID'];
 
 if (isset($_POST['submit'])) {
-	$descripcion = $_POST["descripcion"];
-	$chga = "wht whit this";
+	$desc_eventos = $_POST["desc_evento"];
+	//$chga = "wht whit this";
 	$_SESSION['id'];
 	if (count($_FILES) > 0){
 		//Aqui se hace la validacion si la funcion is_uploaded_fle es mayor que 0 se mete al if de lo contrario se mete al else 
@@ -26,8 +26,10 @@ if (isset($_POST['submit'])) {
         	require_once "includes/dbh.inc.php";
         	$imgData = addslashes(file_get_contents($_FILES['postImage']['tmp_name']));
         	$imageProperties = getimageSize($_FILES['postImage']['tmp_name']);
-        	$sql = "INSERT INTO posts(imagen, descripcion, tag, user_ID, imgType)
-			VALUES('{$imgData}', '{$descripcion}', '{$chga}', '{$_SESSION['id']}', '{$imageProperties['mime']}')";
+        	$sql = "INSERT INTO eventos_posts(titulo_evento, desc_evento, foto_evento, fecha_ini_evento, fecha_final_evento, imgType)
+			VALUES('{$imgData}', '{$desc_eventos}','{$_SESSION['id']}', '{$imageProperties['mime']}')";
+			echo($desc_eventos);
+			//echo($sql);
         	$current_id = mysqli_query($conn, $sql) or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_error($conn));
 		    if (isset($current_id)) {
             	header("Location: main.php");

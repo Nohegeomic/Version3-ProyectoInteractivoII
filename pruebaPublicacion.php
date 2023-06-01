@@ -103,7 +103,11 @@ $resultpost = mysqli_query($conn, $sqlpost);
 					    <div class="modal-body p-4 p-md-5">
 
 
-					    	<form method="post" action="insbloppost.php" class="form-container" enctype="multipart/form-data">
+					    	<form method="post" action="INTOEVENTS.php" class="form-container" enctype="multipart/form-data">
+                                <div class = "container Nombre de Evento">
+                                    <h1 class = "titulo">Nombre del Evento</h1>
+                                    <textarea name="descripcion" rows="5" cols="30"></textarea>
+                                </div>
 			                    <div class="container subir-img">
 			                        <h1 class="titulo">Subir imagen</h1>
 			                            <div class="container upload-container" >
@@ -116,9 +120,18 @@ $resultpost = mysqli_query($conn, $sqlpost);
 			                        <br>
 			                        <textarea name="descripcion" rows="5" cols="30"></textarea>
 			                        <br>
-			                        <button type="submit" name="submit" value="submit" class="btn btn-blue">Listo</button>
-			                        <input href="#" type="submit" data-dismiss="modal" aria-label="Close" value="Cancelar" class="btn-red cerrar">
+			                        
 			                    </div>
+                                <div class="form-group mb-2">
+                                    <label for="start_datetime" class="control-label">Start</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="start_datetime" id="start_datetime" required>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="end_datetime" class="control-label">End</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="end_datetime" id="end_datetime" required>
+                                </div>
+                                <button type="submit" name="submit" value="submit" class="btn btn-blue">Listo</button>
+			                    <input href="#" type="submit" data-dismiss="modal" aria-label="Close" value="Cancelar" class="btn-red cerrar">
               				</form>
 
 			            </div>
