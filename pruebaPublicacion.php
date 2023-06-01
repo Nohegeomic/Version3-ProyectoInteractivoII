@@ -45,38 +45,87 @@ $resultpost = mysqli_query($conn, $sqlpost);
                     <i class="fas fa-home"></i>
                     <span class="nav-item">Home</span>
                 </a></li>
+                <li class="nav-2"><a href="#" class="icon-sidebar">
+                    <a href="#" type="button" data-toggle="modal" data-target="#agregar-Evento" class="icon-sidebar">
+                    <i class="fas fa-plus"></i>
+                    <span class="nav-item">Agregar Evento Angel Penudo</span>
+                </a></li>
+
+                <!-- BOTON PARA MODAL SUBIR PUBLICACION
+                <a href="#" type="button" data-toggle="modal" data-target="#subir-publicacion" class="icon-sidebar">
+                    <i class="fas fa-plus"></i>
+                    <span class="nav-item">Agregar publicacion</span>
+                </a> -->
+
+
             </ul>
         </nav>
         <section id="columnacentral">
                         <?php
                         while ($row = mysqli_fetch_array($resultpost)) {
                         ?>
-                    <div class="container publicacion">
-                            <div class="row post-header">
-                                <article class="col-2">
-                                <img src="images/baba.jpg" class="img-fluid">
-                                    <!-- <img src="<?php //echo $row['foto_evento'];?>" class="img-fluid post-profile" alt="Profile-user"> -->
-                                </article>
-                                <article class="col-10 container-fluid">
-                                <h1 class="titulo"><?php echo $row['titulo_evento']; ?></h1> <!aqui va el titulo!>
-                                        <p><?echo $row['desc_evento']?></p> <!aqui va la descripcion!>
-                                </article>
-                            </div>
-                            
-                            <div class="post-img">
-                                <img src="imgvista_evento.php?image_id=<?php echo $row['ID']?>" class="img-fluid"  width="300" height="300"> <!de aqui salen las fotos!>
-                            </div>
+                            <div class="container publicacion">
+                                    <div class="row post-header">
+                                        <article class="col-2">
+                                        <img src="images/baba.jpg" class="img-fluid">
+                                            <!-- <img src="<?php //echo $row['foto_evento'];?>" class="img-fluid post-profile" alt="Profile-user"> -->
+                                        </article>
+                                        <article class="col-10 container-fluid">
+                                        <h1 class="titulo"><?php echo $row['titulo_evento']; ?></h1> <!aqui va el titulo!>
+                                                <p><?echo $row['desc_evento']?></p> <!aqui va la descripcion!>
+                                        </article>
+                                    </div>
+                                    
+                                    <div class="post-img">
+                                        <img src="imgvista_evento.php?image_id=<?php echo $row['ID']?>" class="img-fluid"  width="300" height="300"> <!de aqui salen las fotos!>
+                                    </div>
 
-                            <div class="container" >
-								<p>Fecha de inicio <?php echo $row ['fecha_ini_evento']?></p> 
-                                <p>Fecha de finalizacion <?php echo $row ['fecha_final_evento']?></p>
-                                <p>Descripcion rapida de lo que va a tomar el evento <?php echo $row ['desc_evento']?></p>
+                                    <div class="container" >
+                                        <p>Fecha de inicio <?php echo $row ['fecha_ini_evento']?></p> 
+                                        <p>Fecha de finalizacion <?php echo $row ['fecha_final_evento']?></p>
+                                        <p>Descripcion rapida de lo que va a tomar el evento <?php echo $row ['desc_evento']?></p>
+                                    </div>
                             </div>
-                    </div>
-                    <?php
-                        }
-                        ?>
-                        </section>
+                        <?php
+                        }?>
+        </section>
+
+        <!-- POP UP EVENTO NUEVO-->
+
+        <div class="modal fade" id="agregar-Evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+			<div class="modal-dialog m-container" role="document">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="ion-ios-close"><i class="fas fa-times"></i></span>
+				  </button>
+
+					<div class="modal-content m-content">
+					    <div class="modal-body p-4 p-md-5">
+
+
+					    	<form method="post" action="insbloppost.php" class="form-container" enctype="multipart/form-data">
+			                    <div class="container subir-img">
+			                        <h1 class="titulo">Subir imagen</h1>
+			                            <div class="container upload-container" >
+                                              <!-- Se agrego el required para que el usuario este forzado a agregar una img -->
+				                              <input type="file" name="postImage" class="uploadFile" value="Upload Photo" required>
+			                        	</div>
+			                    </div>
+			                    <div class="container post-descripcion">
+			                        <label for="descripcion"><b>Descripción del post</b></label>
+			                        <br>
+			                        <textarea name="descripcion" rows="5" cols="30"></textarea>
+			                        <br>
+			                        <button type="submit" name="submit" value="submit" class="btn btn-blue">Listo</button>
+			                        <input href="#" type="submit" data-dismiss="modal" aria-label="Close" value="Cancelar" class="btn-red cerrar">
+			                    </div>
+              				</form>
+
+			            </div>
+				    </div>
+			</div>
+		</div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
