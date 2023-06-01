@@ -106,7 +106,7 @@ $resultpost = mysqli_query($conn, $sqlpost);
 					    	<form method="post" action="INTOEVENTS.php" class="form-container" enctype="multipart/form-data">
                                 <div class = "container Nombre de Evento">
                                     <h1 class = "titulo">Nombre del Evento</h1>
-                                    <textarea name="descripcion" rows="5" cols="30"></textarea>
+                                    <textarea name="titulo_evento" rows="5" cols="30"></textarea>
                                 </div>
 			                    <div class="container subir-img">
 			                        <h1 class="titulo">Subir imagen</h1>
@@ -118,17 +118,17 @@ $resultpost = mysqli_query($conn, $sqlpost);
 			                    <div class="container post-descripcion">
 			                        <label for="descripcion"><b>Descripción del post</b></label>
 			                        <br>
-			                        <textarea name="descripcion" rows="5" cols="30"></textarea>
+			                        <textarea name="desc_evento" rows="5" cols="30"></textarea>
 			                        <br>
 			                        
 			                    </div>
                                 <div class="form-group mb-2">
-                                    <label for="start_datetime" class="control-label">Start</label>
-                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="start_datetime" id="start_datetime" required>
+                                    <label for="fecha_ini_evento" class="control-label">Start</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="fecha_ini_evento" id="fecha_ini_evento" required>
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="end_datetime" class="control-label">End</label>
-                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="end_datetime" id="end_datetime" required>
+                                    <label for="fecha_final_evento" class="control-label">End</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="fecha_final_evento" id="fecha_final_evento" required>
                                 </div>
                                 <button type="submit" name="submit" value="submit" class="btn btn-blue">Listo</button>
 			                    <input href="#" type="submit" data-dismiss="modal" aria-label="Close" value="Cancelar" class="btn-red cerrar">
