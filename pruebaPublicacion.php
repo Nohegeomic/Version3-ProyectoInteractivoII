@@ -48,7 +48,7 @@ $resultpost = mysqli_query($conn, $sqlpost);
                 <li class="nav-2"><a href="#" class="icon-sidebar">
                     <a href="#" type="button" data-toggle="modal" data-target="#agregar-Evento" class="icon-sidebar">
                     <i class="fas fa-plus"></i>
-                    <span class="nav-item">Agregar Evento Angel Penudo</span>
+                    <span class="nav-item">Agregar Evento</span>
                 </a></li>
 
                 <!-- BOTON PARA MODAL SUBIR PUBLICACION
@@ -71,8 +71,8 @@ $resultpost = mysqli_query($conn, $sqlpost);
                                             <!-- <img src="<?php //echo $row['foto_evento'];?>" class="img-fluid post-profile" alt="Profile-user"> -->
                                         </article>
                                         <article class="col-10 container-fluid">
-                                        <h1 class="titulo"><?php echo $row['titulo_evento']; ?></h1> <!aqui va el titulo!>
-                                                <p><?echo $row['desc_evento']?></p> <!aqui va la descripcion!>
+                                        <h1 class="titulo"><?php echo $row['titulo_evento']; ?></h1> <!--aqui va el titulo-->
+                                                <p><?echo $row['desc_evento']?></p> <!--aqui va la descripcion-->
                                         </article>
                                     </div>
                                     
@@ -83,8 +83,9 @@ $resultpost = mysqli_query($conn, $sqlpost);
                                     <div class="container" >
                                         <p>Fecha de inicio <?php echo $row ['fecha_ini_evento']?></p> 
                                         <p>Fecha de finalizacion <?php echo $row ['fecha_final_evento']?></p>
-                                        <p>Descripcion rapida de lo que va a tomar el evento <?php echo $row ['desc_evento']?></p>
+                                        <p><?php echo $row ['desc_evento']?></p>
                                     </div>
+                                    <button type="button" name="boton" value="" class="btn btn-blue">Asistir</button>
                             </div>
                         <?php
                         }?>

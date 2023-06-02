@@ -17,10 +17,10 @@ $query = "SELECT * FROM usuarios";
 
 if (isset($_POST['submit'])) {
 	$desc_eventos = $_POST["desc_evento"];
-	$pruebal = $_POST["titulo_evento"];
-	$pruebal1 = $_POST["desc_evento"];
-	$pruebal2 = $_POST["fecha_ini_evento"];
-	$pruebal3 = $_POST["fecha_final_evento"];
+	$titulo_evento = $_POST["titulo_evento"];
+	//$pruebal1 = $_POST["desc_evento"];
+	$fecha_ini = $_POST["fecha_ini_evento"];
+	$fecha_final = $_POST["fecha_final_evento"];
 	//$chga = "wht whit this";
 	$_SESSION['id'];
 	if (count($_FILES) > 0){
@@ -31,19 +31,15 @@ if (isset($_POST['submit'])) {
         	$imgData = addslashes(file_get_contents($_FILES['postImage']['tmp_name']));
         	$imageProperties = getimageSize($_FILES['postImage']['tmp_name']);
         	$sql = "INSERT INTO eventos_posts(titulo_evento, desc_evento, foto_evento, fecha_ini_evento, fecha_final_evento, imgType)
-			VALUES('{$imgData}', '{$desc_eventos}','{$_SESSION['id']}', '{$imageProperties['mime']}')";
-			echo($pruebal);
-			echo($pruebal1);
-			echo($pruebal2);
-			echo($pruebal3);
+			VALUES('{$titulo_evento}' ,'{$desc_eventos}','{$imgData}', '{$fecha_ini}','{$fecha_final}', '{$imageProperties['mime']}')";
 			//echo($sql);
         	$current_id = mysqli_query($conn, $sql) or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_error($conn));
 		    if (isset($current_id)) {
-            	header("Location: main.php");
+            	header("Location: pruebaPublicacion.php");
         	}
     	}else{ 
 			//to-do hacer experiencia de usuario si no subio img decirle con un modal o algo por el estilos
-			header("Location: main.php");
+			header("Location: pruebaPublicacion.php");
 		}
 	}
 }
