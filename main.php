@@ -28,7 +28,7 @@ $fileSRC="images/Haslin.png";
 
 
 
-    <title>AnimationStudents</title>
+    <title>ArtVault</title>
 </head>
 <body>
     <!--------------------------------------------Sidebar----------------------------------------->

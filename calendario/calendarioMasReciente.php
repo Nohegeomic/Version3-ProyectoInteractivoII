@@ -48,7 +48,7 @@
             </ul>
         </nav>
     <?php
-        require_once('db-connect.php');
+        require_once('../includes/dbh.inc.php');
 
         $schedules = $conn->query("SELECT * FROM `schedule_list`");
         $sched_res = [];

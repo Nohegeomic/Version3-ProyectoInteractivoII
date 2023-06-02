@@ -38,7 +38,7 @@ $resultpost = mysqli_query($conn, $sqlpost);
                 <li class="nav-1">
                     <a href="perfil.html" class="logo">
                         <img src="images/baba.jpg" class="img-fluid">
-                         /*<span class="nav-item"><?php echo $_SESSION['Nom']." ".$_SESSION['Apel'];?></span>*/
+                         <span class="nav-item"><?php echo $_SESSION['Nom']." ".$_SESSION['Apel'];?></span>
                     </a>
                 </li>
                 <li class="nav-2"><a href="main.php" class="icon-sidebar">
@@ -67,10 +67,14 @@ $resultpost = mysqli_query($conn, $sqlpost);
                             <div class="container publicacion">
                                     <div class="row post-header">
                                         <article class="col-2">
-                                        <img src="images/baba.jpg" class="img-fluid">
+                                        <a href="perfil.html" class="logo">
+                                            <img src="images/baba.jpg" class="img-fluid post-profile">
+                                        </a>
                                             <!-- <img src="<?php //echo $row['foto_evento'];?>" class="img-fluid post-profile" alt="Profile-user"> -->
                                         </article>
+
                                         <article class="col-10 container-fluid">
+                                        <span class="nav-item"><?php echo $_SESSION['Nom']." ".$_SESSION['Apel'];?></span>
                                         <h1 class="titulo"><?php echo $row['titulo_evento']; ?></h1> <!--aqui va el titulo-->
                                                 <p><?echo $row['desc_evento']?></p> <!--aqui va la descripcion-->
                                         </article>
