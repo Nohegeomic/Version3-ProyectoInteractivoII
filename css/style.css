@@ -1,12 +1,10 @@
-
-
 *{
-
     text-decoration: none;
     box-sizing: border-box;
 }
+
 body{
-    font-family: Roboto;
+    font-family: 'PT_Sans_Narrow', sans-serif;
     background-color: #EDEDED;
     font-size: 20px;
     font-weight: 400;
@@ -31,13 +29,16 @@ p {
 }
 
 /*-----------------------------------TIPOGRAFIAS-----------------------------------*/
+
 .titulo{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
     color: #183654;
+    font-family: 'Cocogoose', sans-serif;
+    padding-left: 10px;
 }
 
 .titulo-2{
@@ -47,18 +48,21 @@ p {
     letter-spacing: 0em;
     text-align: left;
     color: #183654;
+    font-family: 'Cocogoose', sans-serif;
 }
 
 .subtitulo{
     font-size: 10px;
     font-weight: 400;
     color: #727272;
+    font-family: 'Cocogoose', sans-serif;
 }
 
 .subtitulo-2{
     font-size: 12px;
     font-weight: 200;
     color: #032659;
+    font-family: 'Cocogoose', sans-serif;
 }
 
 .btn-azul{
@@ -73,6 +77,7 @@ p {
 .btn-azul:hover{
     background-color: #3d3d3d;
     color: #fff;
+    font-family: 'Cocogoose', sans-serif;
 }
 
 .btn-dark{
@@ -80,9 +85,11 @@ p {
     color: #fff;
     background: #3B5F94;
     border: none;
+    font-family: 'Cocogoose', sans-serif;
 }
 .btn-dark:hover{
-    background-color: #hhhhh;
+    background-color: #000000;
+    font-family: 'Cocogoose', sans-serif;
 }
 
 .btn-light{
@@ -90,9 +97,11 @@ p {
     color: #fff;
     background: #bcbcbc;
     border: none;
+    font-family: 'Cocogoose', sans-serif;
 }
 .btn-light:hover{
     background-color: #3B5F94;
+    font-family: 'Cocogoose', sans-serif;
 }
 
 .btn-trans {
@@ -103,11 +112,69 @@ p {
     padding: 10px 16px;
     width: 70px;
     margin: 7px;
+    font-family: 'Cocogoose', sans-serif;
 }
 .btn-trans:hover {
     background-color: #ffffff1a;
     color: #ddd;
+    font-family: 'Cocogoose', sans-serif;
 }
+/******************************dropdowns********************************************/
+/* Fixed sidenav, full height */
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    margin-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
 
 /*--------------------------------SIDEBAR IZQUIERDA---------------------------------*/
 
@@ -120,20 +187,31 @@ p {
     text-align: center;
     display: flex;
     transition: all 0.5s ease;
-    margin-left: 22px;
-    margin-bottom: 15px;
+    padding-left: 8px;
+    /*margin-bottom: 15px;*/
+    padding-top: 15px;
     min-width: 258px;
  }
 
+ .pfp{
+   margin: 6px;
+ }
+
+.nav-item-name{
+  position: relative;
+  color: #E9AE59;
+  padding-top: 12px;
+  margin-left: -10px;
+}
  .logo span{
-    margin-left: 25px;
+    padding-left: 25px;
     text-decoration: none;
  }
  .logo img{
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    min-width: 45px;
+    min-width: 38px;
  }
 
  .icon-sidebar{
@@ -150,19 +228,21 @@ p {
  }
 
  .logo-unitec{
-    margin: auto;
+    margin: 2px;
+    padding-top: 15px;
  }
 
  .logo-sidebar{
     display: flex;
     flex-direction: row;
-    margin: 21px 3px 36px 7px;
+    /*margin: 21px 3px 36px 7px;*/
+    padding: 10px;
  }
  #navbar-side .fas{
     position: relative;
-    width: 70px;
+    width: 45px;
     height: 40px;
-    top: 14px;
+    padding-top: 14px;
     font-size: 20px;
     text-align: center;
     color: #BCBCBC;
@@ -171,7 +251,8 @@ p {
  .nav-item{
     position: relative;
     color: #3B5F94;
-    top: 12px;
+    padding-top: 12px;
+    padding-left: 5px;
     margin-left: 10px;
  }
 
@@ -197,10 +278,10 @@ p {
 
 /*--------------------------------------Publicacion-------------------------------------*/
 .publicacion {
-    background-color: #fff;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    border-radius: 25px;
+    border-radius: 3%;
     padding: 5px 15px;
     margin: 5% 0 5% 0;
 }
@@ -221,16 +302,53 @@ p {
 .like{
     margin: 8px;
 }
-.post-header h1{
-    margin-top: 5px;
-    margin-left: 5px;
 
+@media screen and (max-width: 600px) {
+  .post-header h1{
+      margin-top: 5px;
+  }
+  .post-header p{
+      font-family: 'PT_Sans_Narrow', sans-serif;
+      font-size: 10px;
+      padding-left: 10px;
+      margin-bottom: 0;
 }
-.post-header p{
-    font-size: 18px;
-    margin-left: 10px;
 
+  h1.titulo{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    color: #183654;
+    font-family: 'Cocogoose', sans-serif;
+    padding-left: 10px;
+    margin: 0;
+  }
 }
+
+@media screen and (min-width: 601px){
+  .post-header h1{
+      margin-top: 5px;
+  }
+  .post-header p{
+      font-family: 'PT_Sans_Narrow', sans-serif;
+      font-size: 14px;
+      padding-left: 10px;
+      margin-bottom: 0;
+    }
+
+    h1.titulo{
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+        color: #183654;
+        font-family: 'Cocogoose', sans-serif;
+        padding-left: 10px;
+        margin: 0;
+    }
+}
+
+
+
 .post-header article{
     display: flex;
     flex-direction: column;
@@ -238,7 +356,7 @@ p {
 }
 .post-profile{
     border-radius: 50%;
-    width: 75px;
+    width: 45%;
     margin: auto;
 }
 
@@ -263,9 +381,9 @@ p {
 #columnacentral{
     height: 100vh;
 
-    margin-left: 11%;
+    padding-left: 5%;
 
-    background-color: #EDEDED;
+    background-color:#E3E3E3;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
@@ -376,7 +494,7 @@ p {
     position: absolute;
     z-index: 11;
     width: 100%;
-    height: 60px;
+    height: 70px;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -411,8 +529,8 @@ p {
     margin: auto;
     }
 
-     .logo-unitec{
-   visibility: hidden;
+  .logo-unitec{
+   visibility: initial;
  }
   .botones{
   font-size: 10px;
@@ -442,8 +560,8 @@ p {
     top: 0;
     bottom: 0;
     height: 100%;
-    background-color: #fff;
-    width: 90px;
+    background-color: #032659;
+    width: 72px;
     overflow: hidden;
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -512,26 +630,36 @@ p {
 
 
 #modal-login .page{
-	background-image: url("../images/painting study.png");
-	background-size: 1920px;
+	background-image: url("../images/fondo_login.jpg");
+	background-size: cover;
+  background-position: top center;
 	padding: 15px;
+
 }
 #modal-login .page-content{
 	border-radius: 40px;
-
+  width: fit-content;
+  padding: 0 10%;
+  position: relative;
+  align-content: center;
+  margin: auto;
 }
+
+
 #modal-registro .page{
-	background-image: url("../images/painting study.png");
-	background-size:1920px;
+  background-image: url("../images/fondo_login.jpg");
+	background-size: cover;
+  background-position: top center;
 	padding: 15px;
 }
+
 #modal-registro .page-content{
-	border-radius: 40px;
-	margin-top: auto;
-	margin-bottom: auto;
-	height: auto;
-	max-height: 100%;
-	width: 100%;
+  border-radius: 40px;
+  width: fit-content;
+  padding: 0 5%;
+  position: relative;
+  align-content: center;
+  margin: auto;
 
 }
 a:hover {
@@ -762,7 +890,8 @@ a:hover {
 
 
 
-/----HISTORIAS----/
+/*HISTORIAS*/
+
 
 body{
 	background: #EDEDED;

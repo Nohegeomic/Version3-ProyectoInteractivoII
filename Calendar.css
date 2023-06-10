@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Cocogoose';
+    src: url(fonts\Cocogoose Pro-trial.ttf);
+}
+
+@font-face {
+    font-family: 'PT_Sans_Narrow';
+    src: url(fonts\PT_Sans-Narrow-Web-Regular.ttf);
+}
+
 .calendar {
     display: flex;
     flex-flow: column;
@@ -6,7 +16,10 @@
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Cocogoose', sans-serif;
+    background-color: #032659;
 }
 .calendar .header{
     background-color:#023c40;
@@ -15,10 +28,15 @@
     display: flex;
     flex-flow: wrap;
 }
+
+#content-home{
+  background-color: transparent !important;
+}
 .calendar .days .day_name {
+    font-family: 'Cocogoose', sans-serif;
     width: calc(100% / 7);
     border-right: 1px solid #001514;
-    padding: 20px;
+    padding: 10px 5px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
@@ -36,7 +54,7 @@
     width: calc(100% / 7);
     border-right: 1px solid #e6e9ea;
     border-bottom: 1px solid #e6e9ea;
-    padding: 15px;
+    padding: 10px 5px;
     font-weight: bold;
     color: #023c40;
     cursor: pointer;
@@ -46,6 +64,7 @@
     display: inline-flex;
     width: 30px;
     font-size: 14px;
+    font-family: 'PT_Sans_Narrow', sans-serif;
 }
 .calendar .days .day_num .event {
     margin-top: 10px;

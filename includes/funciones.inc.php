@@ -101,7 +101,7 @@ return $result;
 function loginUser($conn, $email, $nucuenta, $pwd){
 
 		session_start();
-		$query = "SELECT ID, nombre, apellido, num_cuenta, num_telefono, correo, contrasenia FROM usuarios WHERE correo = '$email' && contrasenia = '$pwd' ";
+		$query = "SELECT ID, nombre, apellido, num_cuenta, num_telefono, correo, contrasenia, pfp, banner, imgType, bio FROM usuarios WHERE correo = '$email' && contrasenia = '$pwd' ";
     $result = $conn->query($query);
 
     if (!$result) die("Fatal Error");
@@ -114,6 +114,10 @@ function loginUser($conn, $email, $nucuenta, $pwd){
         $_SESSION['N_Tel'] = $row['num_telefono'];
         $_SESSION['Correo'] = $row['correo'];
         $_SESSION['Contra'] = $row['contrasenia'];
+		$_SESSION['pfp'] = $row['pfp'];
+		$_SESSION['banner'] = $row['banner'];
+		$_SESSION['imgType'] = $row['imgType'];
+		$_SESSION['bio'] = $row['bio'];
 
 
 		$sql = "SELECT count(*) as 'contar' FROM usuarios WHERE correo = '$email' and num_cuenta = '$nucuenta' and contrasenia = '$pwd'";
