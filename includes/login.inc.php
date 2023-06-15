@@ -7,7 +7,6 @@ if (isset($_POST['submit'])) {
 	$email = $_POST["e-mail"];
 	$nucuenta = $_POST["nucuenta"];
 	$pwd = $_POST["password"];
-	echo $pwd;
 
 	require_once 'dbh.inc.php';
 	require_once 'funciones.inc.php';

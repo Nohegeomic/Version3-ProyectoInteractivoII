@@ -11,8 +11,14 @@ $result = mysqli_query($conn, $sql);
 
 $sqlpost = "SELECT ID, descripcion FROM posts ORDER BY ID DESC";
 $resultpost = mysqli_query($conn, $sqlpost);
+<<<<<<< Updated upstream
 $fileSRC = "images/Haslin.png";
 ?>
+=======
+$fileSRC="images/color.png";
+
+  ?>
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +46,7 @@ $fileSRC = "images/Haslin.png";
 
 
             <ul>
+<<<<<<< Updated upstream
                 <li>
                     <a href="main.php" class="logo-sidebar">
                         <img src="images/logo1.png" class="img-fluid logo-unitec" alt="unitec_mini" width="50"
@@ -52,6 +59,12 @@ $fileSRC = "images/Haslin.png";
                         <span class="nav-item">
                             <?php echo $_SESSION['Nom'] . " " . $_SESSION['Apel']; ?>
                         </span>
+=======
+                <li class="nav-1">
+                    <a href="perfil.php" class="logo">
+                         <img src="<?php echo $fileSRC?>" class="img-fluid">
+                         <span class="nav-item"><?php echo $_SESSION['Nom']." ".$_SESSION['Apel'];?></span>
+>>>>>>> Stashed changes
                     </a>
                 </li>
                 <li class="nav-2"><a href="main.php" class="icon-sidebar">
@@ -59,6 +72,7 @@ $fileSRC = "images/Haslin.png";
                         <span class="nav-item">Home</span>
                     </a></li>
                 <li class="nav-3"><a href="calendario/calendarioMasReciente.php" class="icon-sidebar">
+<<<<<<< Updated upstream
                         <i class="fas fa-calendar "></i>
                         <span class="nav-item">Calendario</span>
                     </a></li>
@@ -101,12 +115,55 @@ $fileSRC = "images/Haslin.png";
         </div>
     </nav>
 
+=======
+                    <i class="fas fa-calendar "></i>
+                    <span class="nav-item">Calendario</span>
+                </a></li>
+                 <li class="nav-4">
+                 
+                    <a class="icon-sidebar dropdown-btn">
+                    <i class="fas fa-plus"></i>
+                    <span class="nav-item">Hacer Publicacion</span>
+                    </a>
+                         <ul class="dropdown-container">
+                                <li class="nav-4">
+                                        <!--BOTON PARA MODAL SUBIR PUBLICACION -->
+                                        <a href="#" type="button" data-toggle="modal" data-target="#subir-publicacion" class="icon-sidebar">
+                                    <i class="fas fa-plus"></i>
+                                    <span class="nav-item">Agregar publicacion</span>
+                                        </a>
+                                </li>
+                                <li class="nav-4">
+                                        <a href="#" type="button" data-toggle="modal" data-target="#subir-historia" class="icon-sidebar">
+                                    <i class="fas fa-plus"></i>
+                                    <span class="nav-item">Subir Historia</span>
+                                        </a>
+                                </li>
+                        </ul>
+                 </li>
+                        
+                  
+                <li class="nav-5"><a href="pruebaPublicacion.php" class="icon-sidebar">
+                    <i class="fas fa-bell"></i>
+                    <span class="nav-item">Eventos</span>
+                </a></li>
+                <li class="nav-6"><a href="#" class="icon-sidebar log-out" onclick="botonSalir()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Cerrar Sesion</span>
+                </a></li>
+                
+            </ul>
+        </nav>
+
+
+>>>>>>> Stashed changes
 
 
 
 
 
 
+<<<<<<< Updated upstream
 
     <!--Pop up de botonSalir -->
     <div id="ventanaSalir" class="modal container-fluid" style="display: none;">
@@ -118,6 +175,31 @@ $fileSRC = "images/Haslin.png";
             </div>
         </div>
     </div>
+=======
+        <!--Pop up de botonSalir -->
+        <div id="ventanaSalir" class="modal container-fluid" style="display: none;">
+            <div class="contenidoSalir">
+                <h4>¿Estás seguro que quieres cerrar sesión?</h4>
+                <div class="opcionesSalir">
+                    <a href="index.php" class="botonSi">SI</a>
+                    <a onclick="botonSalir()" href="#" class="botonNo">NO</a>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- POP UP PUBLICACION NUEVO-->
+
+        <div class="modal fade" id="subir-publicacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+			<div class="modal-dialog m-container" role="document">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="ion-ios-close"><i class="fas fa-times"></i></span>
+				  </button>
+
+					<div class="modal-content m-content">
+					    <div class="modal-body p-4 p-md-5">
+>>>>>>> Stashed changes
 
 
     <!-- POP UP PUBLICACION NUEVO-->
@@ -153,6 +235,7 @@ $fileSRC = "images/Haslin.png";
                         </div>
                     </form>
 
+<<<<<<< Updated upstream
                 </div>
             </div>
         </div>
@@ -196,6 +279,44 @@ $fileSRC = "images/Haslin.png";
                         </div>
                     </div>
 
+=======
+
+
+                        <div class="publicarCancelar">
+
+                            <!--Botones para PUBLICAR o CANCELAR el post-->
+
+
+
+							</div>
+
+
+
+			            </div>
+				    </div>
+			</div>
+		</div>
+
+
+
+
+
+
+        <section id="columnacentral">
+
+
+            <!----------------------Barra de Busqueda----------------------->
+            <div class="container-fluid">
+                <div class="busqueda">
+                    <input id="taskInput" type="text" placeholder="Buscar...">
+                </div>
+            </div>
+            <div class="container-fluid ">
+                    <a href="main.php">
+                        <img src="images/yes.png" class="img-fluid logo-unitec" alt="unitec_mini"width="50" height="50" maxheight="50%">
+                    </a>
+            </div>
+>>>>>>> Stashed changes
 
 
                     <div class="publicarCancelar">
@@ -265,6 +386,7 @@ $fileSRC = "images/Haslin.png";
 
             <!-------------------------------Publicacion----------------------------------->
 
+<<<<<<< Updated upstream
             <?php
             while ($row = mysqli_fetch_array($resultpost)) {
                 ?>
@@ -296,6 +418,35 @@ $fileSRC = "images/Haslin.png";
         </section>
 
     </section>
+=======
+                        <?php
+                        while ($row = mysqli_fetch_array($resultpost)) {
+                        ?>
+                        <div class="container publicacion">
+                            <div class="row post-header">
+                                <article class="col-2">
+                                    <img src="images/baba.jpg" class="img-fluid post-profile" alt="Profile-user">
+                                </article>
+                                <article class="col-10 container-fluid">
+                                        <h1 class="titulo"><?php echo $_SESSION['Nom'].' '.$_SESSION['Apel']; ?></h1>
+                                        <p><?php echo $row['descripcion']; ?></p>
+                                </article>
+                            </div>
+                            <div class="post-img">
+                                <img src="imgvistapost.php?image_id=<?php echo $row["ID"]; ?>" class="img-fluid">
+                            </div>
+
+                              <div class="container post-comments">
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
+
+               </section>
+
+            </section>
+>>>>>>> Stashed changes
 
 
 
@@ -349,6 +500,7 @@ $fileSRC = "images/Haslin.png";
             });
         });
     </script>
+<<<<<<< Updated upstream
     <script>
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -366,6 +518,25 @@ $fileSRC = "images/Haslin.png";
             });
         }
     </script>
+=======
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

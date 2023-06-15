@@ -21,6 +21,8 @@ a:hover{
     color: #fff;
 }
 
+
+
 p {
     font-family: Roboto;
     padding-top: 0px;
@@ -325,7 +327,11 @@ p {
   }
 }
 
+<<<<<<< Updated upstream
 @media screen and (min-width: 601px){
+=======
+@media screen and (min-width: 480px){
+>>>>>>> Stashed changes
   .post-header h1{
       margin-top: 5px;
   }
@@ -389,6 +395,7 @@ p {
     overflow-y: auto;
 
 }
+
 #feed{
     overflow-x: hidden;
     overflow-y: auto;
@@ -488,7 +495,7 @@ p {
 }
 /*-----------------------------------------------MOBILE----------------------------------------------------------*/
 
-@media (max-width: 766px){
+@media (max-width: 390px){
     #navbar-side{
     background-color: #fff;
     position: absolute;
@@ -576,8 +583,9 @@ p {
  }
 
   .logo-unitec{
-    margin: auto;
+    margin-left: 95%;;
  }
+
 	#hero{
 	font-size: 20px;
 
@@ -1258,7 +1266,7 @@ background-color: #FFFFFF;
 }
 /* cell number */
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 390px){
     .carousel-cell{
         width: 50%;
     }
