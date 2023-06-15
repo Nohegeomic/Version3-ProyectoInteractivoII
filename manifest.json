@@ -1,0 +1,19 @@
+{
+  "name": "#ProyectoInteractivoll",
+  "short_name": "#ProyectoInteractivoll",
+  "description": "Bienvenid@ a #ProyectoInteractivoll, es una red social para que los alumnos de la carrera de animacion digital puedan compartir sus proyectos y trabajos a otros alumnos y se puedan ayudar en el desarrolo del mismo",
+  "background_color": "#EDEDED",
+  "theme_color": "#25476A",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "./",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "./images/unitec_mini.png",
+      "size": "500x444",
+      "type": "image/png"
+    }
+  ]
+}

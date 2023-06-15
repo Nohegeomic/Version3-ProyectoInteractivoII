@@ -27,7 +27,7 @@ $fileSRC="images/color.png";
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="manifest" href="./manifest.json"/>
 
 
 
