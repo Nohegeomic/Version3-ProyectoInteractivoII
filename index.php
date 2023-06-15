@@ -14,11 +14,7 @@
 
 
 
-<<<<<<< Updated upstream
 	<title>AnimationStudents</title>
-=======
-	<title>ArtVault</title>
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -125,12 +121,9 @@
 						<form action="includes/registro.inc.php" method="post" id="form-registro">
 							<ul>
 								<div class="list">
-<<<<<<< Updated upstream
-=======
 									<h1>PAGINA TODAVIA EN CONSTRUCCION</h1>
 									
 									<h1><?php echo($txt); ?></h1>
->>>>>>> Stashed changes
 									<li class="item-content item-input">
 										<div class="item-inner">
 											<div class="item-title item-label">Nombre</div>
@@ -158,15 +151,11 @@
 												<span class="input-clear-button"></span>
 											</div>
 										</div>
-<<<<<<< Updated upstream
 									</li>
 									<li>
 										<a href="#" class="button login-screen-close">Regresar</a>
 									</li>
 									
-=======
-									</li>									
->>>>>>> Stashed changes
 								</div>
 							</ul>
 							<div class="list block">
@@ -175,16 +164,11 @@
 										<button type="submit" name="submit"
 											class="button button-fill">Registrarse</button>
 									</li>
-<<<<<<< Updated upstream
-									<li>
-										<a href="#" class="button login-screen-close">Regresar</a>
-=======
 									<br>
 									<li>
 										<button class="button button-fill">
 										<a href="#" class="button login-screen-close">Regresar</a>
 										</button>
->>>>>>> Stashed changes
 									</li>
 								</ul>
 							</div>
@@ -193,10 +177,6 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< Updated upstream
-
-
-=======
 <?php
 if(!empty($_POST)){
 
@@ -217,7 +197,6 @@ if(!empty($_POST)){
 
 ?>
 
->>>>>>> Stashed changes
 <!--plocs alguien recuerde eliminar esto-->
 
 		<div class="login-screen" id="modal-registro2">

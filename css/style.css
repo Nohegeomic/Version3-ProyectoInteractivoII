@@ -327,11 +327,7 @@ p {
   }
 }
 
-<<<<<<< Updated upstream
-@media screen and (min-width: 601px){
-=======
 @media screen and (min-width: 480px){
->>>>>>> Stashed changes
   .post-header h1{
       margin-top: 5px;
   }
