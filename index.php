@@ -16,7 +16,7 @@
 	<link rel="manifest" href="./manifest.json"/>
 
 
-	<title>AnimationStudents</title>
+	<title>ArtVault</title>
 </head>
 
 <body>
@@ -121,8 +121,6 @@
 							<ul>
 								<div class="list">
 									<h1>PAGINA TODAVIA EN CONSTRUCCION</h1>
-									
-									<h1><?php echo($txt); ?></h1>
 									<li class="item-content item-input">
 										<div class="item-inner">
 											<div class="item-title item-label">Nombre</div>
@@ -151,16 +149,12 @@
 											</div>
 										</div>
 									</li>
-									<li>
-										<a href="#" class="button login-screen-close">Regresar</a>
-									</li>
-									
 								</div>
 							</ul>
 							<div class="list block">
 								<ul>
 									<li>
-										<button type="submit" name="submitir"
+										<button type="submit" name="submit"
 											class="button button-fill">Registrarse</button>
 									</li>
 									<br>
@@ -179,8 +173,6 @@
 <?php
 if(!empty($_POST['submitir'])){
 
-
-
 	$NombreUsu=$_POST['name'];
 	$CorreoUsu=$_POST['correo'];
 	$NumCuentaUsu=$_POST['numcuenta'];
@@ -188,115 +180,15 @@ if(!empty($_POST['submitir'])){
 	$to="angel.risso@unitec.edu";
 	$subject="Creacion de cuenta de ArtVault";
 	$txt=$NombreUsu+" "+ $CorreoUsu +" "+$NumCuentaUsu+" ";
-	//mail("angel.risso@unitec.edu",$subject,$txt);
+
+	echo($txt);
+	mail("angel.risso@unitec.edu",$subject,$txt);
 	
 }
 
 
 
 ?>
-
-<!--plocs alguien recuerde eliminar esto-->
-
-		<div class="login-screen" id="modal-registro2">
-			<div>
-				<div class="page">
-					<div class="page-content login-screen-content">
-						<div class="login-screen-title"><img src="images/Logo_UNITEC.png" class="img-fluid" alt=""
-								width="300" height="300"></div>
-						<h1 class="title">Regístrate</h1>
-						<form action="includes/registro.inc.php" method="post" id="form-registro2">
-							<div class="list">
-								<ul>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Nombre</div>
-											<div class="item-input-wrap">
-												<input type="text" name="name" placeholder="Nombre" required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Apellido</div>
-											<div class="item-input-wrap">
-												<input type="text" name="lastname" placeholder="Apellido" required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Correo electrónico</div>
-											<div class="item-input-wrap">
-												<input type="text" name="e-mail" placeholder="Correo electrónico"
-													required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Numero de Cuenta</div>
-											<div class="item-input-wrap">
-												<input type="text" name="nucuenta" placeholder="Numero de cuenta"
-													required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Numero de Telefono</div>
-											<div class="item-input-wrap">
-												<input type="text" name="numtelefono" placeholder="Numero de Telefono"
-													required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Contraseña</div>
-											<div class="item-input-wrap">
-												<input type="password" name="password" placeholder="contraseña"
-													required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-									<li class="item-content item-input">
-										<div class="item-inner">
-											<div class="item-title item-label">Verificar contraseña</div>
-											<div class="item-input-wrap">
-												<input type="password" name="confpass"
-													placeholder="Verificar contraseña" required>
-												<span class="input-clear-button"></span>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="list block">
-								<ul>
-									<li>
-										<button type="submit" name="submit"
-											class="button button-fill">Registrarse</button>
-									</li>
-									<li>
-										<a href="#" class="button login-screen-close">Regresar</a>
-									</li>
-								</ul>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
 
 	<script src="js/framework7.bundle.min.js"></script>
 	<script src="js/app.js"></script>
